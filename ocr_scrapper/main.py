@@ -1,8 +1,5 @@
 import datetime
 import json
-
-from PIL import Image
-import pytesseract
 from selenium import webdriver
 
 from ocr_scrapper.helpers import *
@@ -24,9 +21,12 @@ def recognize_screenshots(screenshots_directory, recognized_texts_directory):
     for screenshot_file in os.listdir(screenshots_directory):
         image_file = screenshots_directory + screenshot_file
         screenshot_name = get_filename_without_extension(screenshot_file)
-        data = {'texts': get_texts_from_areas(image_file)}
+        dataset_unit = DatasetStructure(
+            screenshot=screenshot_file,
+            blocks=get_text_blocks(image_file)
+        )
         with open(f"{recognized_texts_directory}{screenshot_name}.json", 'w') as text_file:
-            text_file.write(json.dumps(data))
+            text_file.write(json.dumps(asdict(dataset_unit)))
 
 
 if __name__ == '__main__':
