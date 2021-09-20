@@ -75,23 +75,36 @@ def get_areas(image):
     return contours
 
 
+def get_box(contour):
+    x, y, w, h = cv2.boundingRect(contour)
+    return x, y, w, h
+
+
 def crop_region(image, region):
-    x, y, w, h = cv2.boundingRect(region)
+    x, y, w, h = get_box(region)
     return image[y:y + h, x:x + w]
 
 
-def get_box(image, contour):
-    # method mock
-    return [0, 0, 0, 0]
+def clean_text(text):
+    # TODO add function is string empty?
+    symbols_to_delete = ['\f', '\n']
+    for symbol in symbols_to_delete:
+        text = text.replace(symbol, ' ')
+    return text
 
 
 def get_texts_from_areas(image: str, contours: list) -> List[Block]:
     blocks = []
     for contour in contours:
-        blocks.append(
-            Block(text=pytesseract.image_to_string(crop_region(image, contour)),
-                  box=get_box(image, contour))
+        recognized_text = pytesseract.image_to_string(crop_region(image, contour))
+        cleaned_recognized_text = clean_text(text = recognized_text)
+        if len(cleaned_recognized_text) > 1 :
+            blocks.append(
+                Block(text=cleaned_recognized_text,
+                      box=get_box(contour)
+            )
         )
+
     return blocks
 
 
