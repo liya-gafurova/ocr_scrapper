@@ -97,13 +97,13 @@ def get_texts_from_areas(image: str, contours: list) -> List[Block]:
     blocks = []
     for contour in contours:
         recognized_text = pytesseract.image_to_string(crop_region(image, contour))
-        cleaned_recognized_text = clean_text(text = recognized_text)
-        if len(cleaned_recognized_text) > 1 :
+        cleaned_recognized_text = clean_text(text=recognized_text)
+        if len(cleaned_recognized_text) > 1:
             blocks.append(
                 Block(text=cleaned_recognized_text,
                       box=get_box(contour)
+                      )
             )
-        )
 
     return blocks
 
