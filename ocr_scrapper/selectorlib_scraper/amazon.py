@@ -6,7 +6,7 @@ import json
 from time import sleep
 
 # Create an Extractor by reading from the YAML file
-e = Extractor.from_yaml_file('selectorlib_custom.yml')
+e = Extractor.from_yaml_file('desired_elements_markup.yml')
 
 
 def scrape(url):
@@ -37,6 +37,7 @@ def scrape(url):
         # Pass the HTML of the page and create
     return e.extract(r.text)
 # product_data = []
+
 with open("urls.txt", 'r') as urllist, open('output.jsonl', 'w') as outfile:
     for url in urllist.readlines():
         data = scrape(url)
