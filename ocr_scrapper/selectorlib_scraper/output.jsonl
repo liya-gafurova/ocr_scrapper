@@ -5,16 +5,16 @@
     "/Apple-MWP22AM-A-AirPods-Pro/dp/B07ZPC9QD4/ref=lp_16225009011_1_1?dchild=1",
     "/Apple-MWP22AM-A-AirPods-Pro/dp/B07ZPC9QD4/ref=lp_16225009011_1_1?dchild=1#customerReviews",
     "/Apple-AirPods-Charging-Latest-Model/dp/B07PXGQC1Q/ref=lp_16225009011_1_2?dchild=1",
-    "/Apple-AirPods-Charging-Latest-Model/dp/B07PXGQC1Q/ref=lp_16225009011_1_2?dchild=1", - почему одинаковые ссылки? можно отсеить через Set()
-    "/Apple-AirPods-Charging-Latest-Model/dp/B07PXGQC1Q/ref=lp_16225009011_1_2?dchild=1#customerReviews", -- ссылка на отзывы пользователей
-    "/gp/bestsellers/videogames/14670126011/ref=sr_bs_2_14670126011_1",  --  всплывающее окно сбоку с возможными ценами
+    "/Apple-AirPods-Charging-Latest-Model/dp/B07PXGQC1Q/ref=lp_16225009011_1_2?dchild=1",
+    "/Apple-AirPods-Charging-Latest-Model/dp/B07PXGQC1Q/ref=lp_16225009011_1_2?dchild=1#customerReviews",
+    "/gp/bestsellers/videogames/14670126011/ref=sr_bs_2_14670126011_1",
     "/Oculus-Quest-Advanced-All-One-Virtual/dp/B099VMT8VZ/ref=lp_16225009011_1_3?dchild=1",
     "/Oculus-Quest-Advanced-All-One-Virtual/dp/B099VMT8VZ/ref=lp_16225009011_1_3?dchild=1",
     "/Oculus-Quest-Advanced-All-One-Virtual/dp/B099VMT8VZ/ref=lp_16225009011_1_3?dchild=1#customerReviews",
     "/Oculus-Quest-Advanced-All-One-Virtual/dp/B099VMT8VZ/ref=lp_16225009011_1_3?dchild=1",
     "/Oculus-Quest-Advanced-All-One-Virtual/dp/B099VMT8VZ/ref=lp_16225009011_1_3?dchild=1",
     "/gp/offer-listing/B099VMT8VZ/ref=lp_16225009011_1_3_olp?dchild=1",
-    "/gp/bestsellers/hpc/ref=sr_bs_3_hpc_1", -- бестселлеры, можно использовать как ссылки на все товары тоже
+    "/gp/bestsellers/hpc/ref=sr_bs_3_hpc_1",
     "/AmazonBasics-Performance-Alkaline-Batteries-Count/dp/B00MNV8E0C/ref=lp_16225009011_1_4?dchild=1",
     "/AmazonBasics-Performance-Alkaline-Batteries-Count/dp/B00MNV8E0C/ref=lp_16225009011_1_4?dchild=1",
     "/AmazonBasics-Performance-Alkaline-Batteries-Count/dp/B00MNV8E0C/ref=lp_16225009011_1_4?dchild=1#customerReviews",
@@ -55,7 +55,7 @@
     "/Vision-Indoor-Outdoor-Camera-Assistant/dp/B08R59YH7W/ref=lp_16225009011_1_12?dchild=1",
     "/Vision-Indoor-Outdoor-Camera-Assistant/dp/B08R59YH7W/ref=lp_16225009011_1_12?dchild=1",
     "/Vision-Indoor-Outdoor-Camera-Assistant/dp/B08R59YH7W/ref=lp_16225009011_1_12?dchild=1#customerReviews",
-    "/s?rh=n%3A16225009011&fs=true&ref=lp_16225009011_sar",
+    "/s?rh=n%3A16225009011&fs=true&ref=lp_16225009011_sar", -- общий  список товаров
     "/s?bbn=16225009011&rh=n%3A281407&dc&qid=1632715371&rnid=16225009011&ref=lp_16225009011_nr_n_0",
     "/s?bbn=16225009011&rh=n%3A541966&dc&qid=1632715371&rnid=16225009011&ref=lp_16225009011_nr_n_1",
     "/s?bbn=16225009011&rh=n%3A2811119011&dc&qid=1632715371&rnid=16225009011&ref=lp_16225009011_nr_n_2",
