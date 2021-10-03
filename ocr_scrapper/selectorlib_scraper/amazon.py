@@ -6,7 +6,8 @@ import json
 from time import sleep
 
 # Create an Extractor by reading from the YAML file
-e = Extractor.from_yaml_file('desired_elements_markup.yml')
+e = Extractor.from_yaml_file('pages_with_products.yml')
+e2 = Extractor.from_yaml_file('test.yml')
 
 
 def scrape(url):
@@ -35,10 +36,10 @@ def scrape(url):
             print("Page %s must have been blocked by Amazon as the status code was %d" % (url, r.status_code))
             return None
         # Pass the HTML of the page and create
-    return e.extract(r.text)
+    return e2.extract(r.text)
 # product_data = []
 
-with open("urls.txt", 'r') as urllist, open('output.jsonl', 'w') as outfile:
+with open("urls.txt", 'r') as urllist, open('output2.jsonl', 'w') as outfile:
     for url in urllist.readlines():
         data = scrape(url)
         if data:
@@ -47,4 +48,6 @@ with open("urls.txt", 'r') as urllist, open('output.jsonl', 'w') as outfile:
             print(data)
         sleep(random.randint(5,10))
 
+
+# TODO add getting product link from PRODUCTS_LIST links
 
