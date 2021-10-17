@@ -11,7 +11,7 @@ def load_webdriver():
 
 def explore_resource(driver, resource, screenshots_directory):
     for url in resource.links:
-        driver.get(url)
+        driver.get('https://amazon.com'+url.replace('"', ''))
         driver.save_screenshot(f'{screenshots_directory}/scr_{datetime.datetime.now()}.png')
 
     driver.close()
@@ -32,7 +32,7 @@ def recognize_screenshots(screenshots_directory, recognized_texts_directory):
 if __name__ == '__main__':
     args = parse_cli_args()
 
-    dataset = load_recourse_dataset('./links/amazon.txt')
+    dataset = load_recourse_dataset('./links/amazon2.txt')
     dirs = create_out_directories(dataset.name)
 
     if args.mode == 'scrape':

@@ -1,3 +1,4 @@
 link:
-    css: a.a-link-normal a-text-normal
+    css: a.a-link-normal.a-text-normal
+    multiple: true
     type: Link
